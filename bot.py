@@ -22,6 +22,12 @@ meses = {
 }
 
 hoje = datetime.datetime.now()
+
+if hoje.weekday() == 5 or hoje.weekday() == 6:
+    exit()
+if hoje.hour < 7 or hoje.hour >= 16:
+    exit()
+
 amanha = hoje + datetime.timedelta(days=1)
 
 datas_alvo = {
